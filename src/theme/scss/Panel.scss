@@ -1,0 +1,24 @@
+///////////////////////////////////////////////////////
+//// PANEL ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+@import './variables/Globals.scss';
+@import './mixins/AlignmentMixins.scss';
+
+.panel {
+    display: flex;
+    position: relative;
+    padding: $screen-padding;
+    
+    .panel-inner {
+        position: relative;
+        display: flex;
+        height: inherit;
+        @include panelAlignment();
+    }
+
+    .panel-children {
+        position: relative;
+        display: flex;
+    }
+}

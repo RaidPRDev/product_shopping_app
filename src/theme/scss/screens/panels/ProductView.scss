@@ -1,0 +1,99 @@
+///////////////////////////////////////////////////////
+//// PRODUCT VIEW ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+.product-view {
+    position: fixed;
+    padding: 0;
+    top: 0;
+    left: -100%;;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    z-index: 501;
+    transition: left 0.25s ease-out;
+  
+    background-color: $extra-light-gray;
+
+    &.product-view--open {
+        left: 0px;
+    }
+
+    .product-view-header {
+        display: flex;
+        background-color: $extra-light-gray;
+        width: 100%;
+        height: 60px;
+        padding: 0;
+
+        .back-button {
+            font-size: 20px;
+            color: $blue;
+            font-weight: $font-weight-bold;
+            cursor: pointer;
+
+            .button-label {
+                margin-left: 8px;
+            }
+        }
+    }
+
+    .product-view-body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: $white;
+        padding: 0;
+
+        .panel-inner {
+            padding: 14px;
+        }
+
+        .product-name {
+            font-size: 14px;
+            font-weight: $font-weight-bold;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: $body-font-size;
+            font-weight: $font-weight-bold;
+            color: $blue;
+            padding-bottom: 10px;
+        }
+    }
+
+    .product-image {
+        display: flex;
+        
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        .product-image-source {
+            display: flex;
+            margin: auto;
+        }
+    }
+
+    .product-description-panel {
+        padding: 14px;
+
+        .panel-title {
+            font-size: 20px;
+            font-weight: $font-weight-regular;
+            color: $dark-gray;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-weight: $font-weight-regular;
+            color: $black;
+            margin-bottom: 10px;
+            line-height: 140%;
+        }
+    }
+}

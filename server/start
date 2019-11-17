@@ -1,0 +1,2 @@
+echo "Running PM2 Server"
+pm2 start server.js --name "app" -- -p

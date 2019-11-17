@@ -1,0 +1,23 @@
+///////////////////////////////////////////////////////
+//// IMAGE ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+@import './mixins/AlignmentMixins.scss';
+
+.image {
+    display: flex;
+    position: relative;
+    line-height: 100%;
+    
+    .image-inner {
+        display: flex;
+        position: relative;
+        width: 100%;
+
+        img {
+            display: flex;
+        }
+
+        @include alignment();
+    }
+}

@@ -1,0 +1,94 @@
+///////////////////////////////////////////////////////
+//// CHECK BOX ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+$check-label-size: 16px;
+$check-size: 20px;
+$check-dot-color: $blue;
+$check-border-color: $blue;
+$check-border-width: 2px;
+$check-fill-color: white;
+$check-gap: $item-gap;
+$check-bottom-gap: $item-bottom-gap;
+$check-border-radius: 0px;
+$check-dot-border-radius: 0px;
+
+.check-box {
+    display: flex;
+    
+    .check-box-inner {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        padding-left: 0;
+        margin-bottom: $check-bottom-gap;
+        cursor: pointer;
+        font-size: $check-label-size;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        /* Hide the browser's default checkbox */
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+    }
+
+    .check-box-label {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Create a custom checkbox */
+    .check-box-checkmark {
+        position: relative;
+        display: inline-flex;
+        top: 0;
+        left: 0;
+        margin-right: $check-gap;
+        height: $check-size;
+        width: $check-size;
+        background-color: $check-fill-color;
+        border: $check-border-width solid $check-border-color;
+        border-radius: $check-border-radius;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .check-box-inner:hover input ~ .radio-box-checkmark {
+        background-color: #ccc;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .check-box-inner input:checked ~ .radio-box-checkmark {
+        background-color: $check-fill-color;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .check-box-checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .check-box-inner input:checked ~ .check-box-checkmark:after {
+        display: flex;
+    }
+
+    /* Style the checkmark/indicator */
+    .check-box-inner .check-box-checkmark:after {
+        top: ($check-size / 2) / 2;
+        left: ($check-size / 2) / 2;
+        width: $check-size / 2;
+        height: $check-size / 2;
+        border: none;
+        transform: none;
+        border-radius: $check-dot-border-radius;
+        background: $check-dot-color;
+    }
+}

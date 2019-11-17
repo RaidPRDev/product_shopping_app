@@ -1,0 +1,65 @@
+///////////////////////////////////////////////////////
+//// CHECKOUT FLOATER /////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+.checkout-floater {
+    position: fixed;
+    bottom: -90px;
+    right: 0px;
+    left: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+    padding: 0px 10px 20px;
+    transition-property: bottom, opacity;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+
+    &.show {
+        bottom: 0px
+    }
+
+    .panel-inner {
+        background-color: $red;
+        border-radius: $panel-border-radius;
+        padding: 15px 0;
+        cursor: pointer;
+    }
+
+    .checkout-floater-title {
+        color: white;
+        font-weight: $font-weight-bold;
+        padding: 0 14px;
+    }
+    
+    .checkout-floater-button {
+       
+        .button-inner {
+            padding: 0 14px;
+        }
+        .label {
+            color: white;
+            font-weight: $font-weight-bold;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .icon-container {
+            animation: 2s linear 0s infinite normal none running alertAnimation;
+        }
+    }
+}
+
+@keyframes alertAnimation {
+    10%, 90% {
+        transform: translateX(-1px);
+    }
+    20%, 80% {
+        transform: translateX(2px);
+    }
+    30%, 50%, 70%  {
+        transform: translateX(-4px);
+    }
+    40%, 60% {
+        transform: translateX(4px)
+    }
+  }

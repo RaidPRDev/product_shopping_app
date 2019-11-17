@@ -1,0 +1,29 @@
+///////////////////////////////////////////////////////
+//// WAITER TIP ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+@import '../../variables/Globals.scss';
+
+.cart-waiter-tip {
+   
+    .cart-waiter-icon {
+        display: flex;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        color: $white;
+        font-weight: $font-weight-bold;
+        line-height: 100%;
+        border: none;
+        box-sizing: content-box;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .icon-gray {
+        background-color: $medium-gray;
+    }
+    .icon-blue {
+        background-color: $blue;
+    }
+}

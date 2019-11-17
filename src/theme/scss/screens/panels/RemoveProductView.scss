@@ -1,0 +1,106 @@
+///////////////////////////////////////////////////////
+//// REMOVE PRODUCT VIEW ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+.remove-product-view-panel {
+    position: fixed;
+    padding: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    z-index: 501;
+    transition: bottom 0.25s ease-out;
+    background-color: $white;
+
+    &.product-view--open {
+        bottom: 0px;
+    }
+
+    .remove-product-view-header {
+        display: flex;
+        background-color: $extra-light-gray;
+        width: 100%;
+        height: 60px;
+        padding: 0;
+
+        .back-button {
+            font-size: 20px;
+            color: $blue;
+            font-weight: $font-weight-bold;
+            cursor: pointer;
+
+            .button-label {
+                margin-left: 8px;
+            }
+        }
+    }
+
+    .remove-product-view-body {
+        padding: 10px;
+    }
+
+    .option-title-text, 
+    .extra-title-text { 
+        margin-top: $item-bottom-gap;
+        font-weight: $font-weight-bold; 
+    }
+
+    .option-title-text, 
+    .option-sub-text,
+    .extra-title-text,
+    .extra-sub-text {
+        margin-bottom: $item-bottom-gap;
+    }
+
+    .remove-to-cart-panel {
+        position: absolute;
+        padding: 0;
+        bottom: 0;
+        width: 100%;
+
+        &.disabled {
+            .remove-to-cart-button {
+                pointer-events: none;
+                opacity: 0.3;
+            }
+        }
+
+        .panel-inner {
+            padding: 10px 10px 20px 10px;
+        }
+    }
+
+    .remove-title {
+        color:black;
+        font-weight: $font-weight-bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .remove-to-cart-button {
+        background-color: $red;
+        border-radius: $button-border-radius;
+        width: auto;
+        order: 0;
+        cursor: pointer;
+
+        .button-inner {
+            padding: 15px 14px;
+        }
+
+        .label {
+            color: $white;
+            font-weight: $font-weight-bold;
+            font-size: 16px;
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

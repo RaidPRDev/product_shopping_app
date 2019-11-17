@@ -1,0 +1,42 @@
+///////////////////////////////////////////////////////
+//// GLOBAL VARIABLES ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+$font-family: 'Roboto', Helvetica, Arial, sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// resolutions
+$device-width-small: 520px;
+$device-width-medium: 760px;
+$device-width-large: 900px;
+
+// colors
+$blue: #1db3de;
+$black: #000000;
+$white: #FFFFFF;
+$yellow: #f7c900;
+$red: #e95b4b;
+$extra-light-gray: #f5f7fa;
+$medium-light-gray: #c4c4c4;
+$light-gray: #a2a2a2;
+$medium-gray: #707070;
+$dark-gray: #333333;
+$body-gray: #f0f3f6;
+
+$validation-error: $red;
+
+// spacing
+$screen-padding: 6px;
+$item-gap: 6px;
+$item-bottom-gap: 10px;
+
+
+$body-font-size: 16px;
+$button-font-size: 20px;
+
+$button-padding: 20px;
+$button-border-radius: 5px;
+$panel-border-radius: 5px;
+

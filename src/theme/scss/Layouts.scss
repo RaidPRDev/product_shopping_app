@@ -1,0 +1,21 @@
+///////////////////////////////////////////////////////
+//// LAYOUT ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+.vertical-align,
+.vertical-layout {
+    flex-direction: column;
+
+   /* [class|="panel"]
+    {
+        &[class*="-inner"]{
+            flex-direction: column;
+        }
+    }*/
+}
+
+.horizontal-align,
+.horizontal-layout {
+    flex-direction: row;
+}
+

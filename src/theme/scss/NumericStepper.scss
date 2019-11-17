@@ -1,0 +1,45 @@
+///////////////////////////////////////////////////////
+//// NUMERIC STEPPER ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+@import './variables/Globals.scss';
+
+.numeric-stepper {
+    display: flex;
+    
+    .numeric-stepper-inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10px;
+        border: 1px solid $medium-light-gray;
+        background-color: $white;
+        width: 100%;
+        border-radius: 8px;
+    }
+    .numeric-stepper-label {
+        .numeric-stepper-label-inner {
+            text-transform: uppercase;
+            color: $blue;
+            font-weight: $font-weight-bold;
+            line-height: 100%;
+        }
+    }
+    .numeric-stepper-controls {
+        display: flex;
+
+        .numeric-stepper-controls-inner {
+            display: flex;
+            flex-direction: row;
+        }
+        .numeric-stepper-dec {
+            display: flex;
+            margin-right: 20px;
+        }
+        .numeric-stepper-value {
+            display: flex;
+            margin-right: 20px;
+        }
+    }
+}

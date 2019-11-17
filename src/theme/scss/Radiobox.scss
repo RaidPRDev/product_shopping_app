@@ -1,0 +1,95 @@
+///////////////////////////////////////////////////////
+//// RADIO BOX ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+$radio-label-size: 16px;
+$radio-size: 20px;
+$radio-dot-color: $blue;
+$radio-border-color: $blue;
+$radio-border-width: 2px;
+$radio-fill-color: white;
+$radio-gap: $item-gap;
+$radio-bottom-gap: $item-bottom-gap;
+$radio-border-radius: 50%;
+$radio-dot-border-radius: 50%;
+
+.radio-box {
+    display: flex;
+    
+    .radio-box-inner {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        padding-left: 0;
+        margin-bottom: $radio-bottom-gap;
+        cursor: pointer;
+        font-size: $radio-label-size;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        /* Hide the browser's default checkbox */
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+    }
+
+    .radio-box-label {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Create a custom checkbox */
+    .radio-box-checkmark {
+        position: relative;
+        display: inline-flex;
+        flex-shrink: 0;
+        top: 0;
+        left: 0;
+        margin-right: $radio-gap;
+        height: $radio-size;
+        width: $radio-size;
+        background-color: $radio-fill-color;
+        border: $radio-border-width solid $radio-border-color;
+        border-radius: $radio-border-radius;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .radio-box-inner:hover input ~ .radio-box-checkmark {
+        background-color: #ccc;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .radio-box-inner input:checked ~ .radio-box-checkmark {
+        background-color: $radio-fill-color;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .radio-box-checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .radio-box-inner input:checked ~ .radio-box-checkmark:after {
+        display: flex;
+    }
+
+    /* Style the checkmark/indicator */
+    .radio-box-inner .radio-box-checkmark:after {
+        top: ($radio-size / 2) / 2;
+        left: ($radio-size / 2) / 2;
+        width: $radio-size / 2;
+        height: $radio-size / 2;
+        border: none;
+        transform: none;
+        border-radius: $radio-dot-border-radius;
+        background: $radio-dot-color;
+    }
+}

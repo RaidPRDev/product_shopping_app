@@ -1,0 +1,34 @@
+///////////////////////////////////////////////////////
+//// BUTTON ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+@import './mixins/AlignmentMixins.scss';
+
+.button {
+
+    &[disabled='true']
+    {
+        pointer-events: none;
+    }
+
+    display: flex;
+    position: relative;
+    line-height: 100%;
+    
+    .button-inner {
+        display: flex;
+        position: relative;
+        width: 100%;
+        @include alignment();
+    }
+
+    .button-label {
+        width: inherit;
+        @include alignment();
+    }
+
+    .button-icon {
+        @include alignment();
+        width: auto;
+    }
+}

@@ -1,0 +1,44 @@
+///////////////////////////////////////////////////////
+//// CART CHECKOUT FLOATER /////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+.cart-checkout-floater {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+    padding: 10px 20px 20px 20px;
+    
+    .cart-checkout-floater-labels {
+        margin-bottom: 8px;
+
+        .cart-checkout-floater-title {
+            color: black;
+            font-weight: $font-weight-bold;
+        }
+
+        .cart-checkout-floater-price {
+            font-size: 20px;
+            font-weight: $font-weight-bold;
+        }
+    }
+    
+    .cart-checkout-floater-button {
+        background-color: $red;
+        border-radius: $panel-border-radius;
+        cursor: pointer;
+        
+        .button-inner {
+            padding: 15px 14px;
+        }
+        .label {
+            color: white;
+            font-weight: $font-weight-bold;
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+///////////////////////////////////////////////////////
+//// CART SUB HEADER  ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+.cart-sub-header {
+    width: 100%;
+    height: 56px;
+    background-color: $dark-gray;
+    display: flex;
+    align-items: center;
+
+    .cart-sub-header-inner {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .cart-sub-header-back {
+        cursor: pointer;
+        
+        .button-label {
+            margin-left: 8px;
+            color: white;
+        }
+    }
+
+    .cart-header-title {
+        color: $blue;
+        font-weight: $font-weight-regular;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .cart-header-body {
+        color: $white;
+        font-weight: $font-weight-regular;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}

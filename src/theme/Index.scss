@@ -1,0 +1,88 @@
+// UI Framework
+@import 'scss/fonts/Fonts.scss';
+@import 'scss/variables/Globals.scss';
+@import 'scss/Layouts.scss';
+
+// UI Controls
+@import 'scss/Button.scss';
+@import 'scss/Checkbox.scss';
+@import 'scss/Image.scss';
+@import 'scss/Label.scss';
+@import 'scss/NumericStepper.scss';
+@import 'scss/Panel.scss';
+@import 'scss/Radiobox.scss';
+@import 'scss/TextInput.scss';
+
+// Screens and Panels
+@import 'scss/screens/ProductScreen.scss';
+@import 'scss/screens/CartScreen.scss';
+@import 'scss/screens/CheckoutScreen.scss';
+@import 'scss/screens/OrderScreen.scss';
+
+// Panels
+@import 'scss/screens/panels/AddProductView.scss';
+@import 'scss/screens/panels/RemoveProductView.scss';
+@import 'scss/screens/panels/ProductView.scss';
+
+// Headers
+@import 'scss/screens/support/MainHeader.scss';
+@import 'scss/screens/support/CheckoutSubHeader.scss';
+@import 'scss/screens/support/CartSubHeader.scss';
+
+// Suport Components
+@import 'scss/screens/support/ProductItem.scss';
+@import 'scss/screens/support/CheckoutFloater.scss';
+@import 'scss/screens/support/CartCheckoutFloater.scss';
+@import 'scss/screens/support/WaiterTip.scss';
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+    font-family: $font-family;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+}
+
+.app-container {
+    position: relative;
+    //width: 375px;
+    //margin: auto;
+
+    //@media all and (max-width: ($device-width-small + 20px)) {
+    //    width: 100%;
+    //    margin: 0;
+    //}
+}
+
+.ui-screen {
+    min-height: calc(100vh - 56px);
+    background-color: rgb(240, 243, 246);
+    max-width: 480px;
+    margin: auto;
+
+    @media all and (max-width: ($device-width-small + 20px)) {
+        width: 100%;
+        margin: 0;
+        max-width: none;
+    }
+
+    
+}
+
+

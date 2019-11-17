@@ -1,0 +1,2 @@
+echo "Stopping PM2 Server"
+pm2 stop app

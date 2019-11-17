@@ -1,0 +1,52 @@
+///////////////////////////////////////////////////////
+//// TEXT INPUT ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+@import './variables/Globals.scss';
+
+/*
+--readytoslide
+transition: .4s cubic-bezier(.25,.46,.45,.94);
+transition-property: left,right;
+*/
+
+.text-input-hidden-field {
+    position: absolute;
+    opacity: 0;
+}
+
+.text-input {
+    display: flex;
+    box-sizing: border-box;
+    padding: 14px 10px;
+    
+    .text-input-label {
+        pointer-events: none;
+        position: absolute;
+    }
+
+    .text-input-inner {
+        display: flex;
+        width: 100%;
+
+        input {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+
+    input::-webkit-input-placeholder { /* Edge */
+        color: $light-gray;
+    }
+      
+    input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $light-gray;
+    }
+      
+    input::placeholder {
+        color: $light-gray;
+    }
+}

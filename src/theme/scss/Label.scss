@@ -1,0 +1,16 @@
+///////////////////////////////////////////////////////
+//// LABEL ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+@import './variables/Globals.scss';
+@import './mixins/AlignmentMixins.scss';
+
+.label {
+    display: flex;
+    line-height: 100%;
+    
+    .label-inner {
+        display: flex;
+        @include alignment();
+    }
+}

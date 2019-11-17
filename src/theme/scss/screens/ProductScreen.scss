@@ -1,0 +1,30 @@
+///////////////////////////////////////////////////////
+//// PRODUCT LIST ///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+body {
+    &.products {
+        background-color: rgb(240, 243, 246);
+    }
+}
+
+.products-list {
+    .ui-screen-inner {
+        padding: 20px $screen-padding;
+        padding-bottom: 160px;
+    }
+
+    .products-group-title {
+        margin-left: 10px;
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+    }
+    
+    .products-group-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
+    }  
+}
+
+
