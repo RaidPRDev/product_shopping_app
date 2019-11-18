@@ -6,9 +6,9 @@ const app = express();
 const braintree = require("braintree");
 var gateway = braintree.connect({
   environment: braintree.Environment.Sandbox,
-  merchantId: "yqmk58mq4h9g54gt",
-  publicKey: "9hvy3b694c4c3ffw",
-  privateKey: "abcb80fdc08a907a95b0bbc6037d0376"
+  merchantId: "",
+  publicKey: "",
+  privateKey: ""
 });
 
 // setup routes
